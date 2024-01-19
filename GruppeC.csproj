@@ -1,0 +1,200 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App\imgs\feuer.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="App\imgs\feuer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </ApplicationDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AssimpNet">
+      <HintPath>AssimpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="glTFLoader">
+      <HintPath>glTFLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="ImGui.NET">
+      <HintPath>ImGui.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="KWEngine3">
+      <HintPath>KWEngine3.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Audio.OpenAL">
+      <HintPath>OpenTK.Audio.OpenAL.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Compute">
+      <HintPath>OpenTK.Compute.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Core">
+      <HintPath>OpenTK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Graphics">
+      <HintPath>OpenTK.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Input">
+      <HintPath>OpenTK.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Mathematics">
+      <HintPath>OpenTK.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Windowing.Common">
+      <HintPath>OpenTK.Windowing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Windowing.Desktop">
+      <HintPath>OpenTK.Windowing.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.Windowing.GraphicsLibraryFramework">
+      <HintPath>OpenTK.Windowing.GraphicsLibraryFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>SkiaSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App\imgs\background\bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\background\gameinfo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\background\page1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\background\page2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\background\page3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\background\shop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\background\StartMenu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Blocks\desert.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Blocks\grass.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Blocks\stone.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Bullitt\b.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\death.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Enemy\Z7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\bullet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\coin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\Gold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\HP.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\munition.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\pause.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\ruestung.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\objects\schild.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\Z.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Bullitt\bullitt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Cars\car1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Cars\car2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Player\p1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App\imgs\Player\p2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assimp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="cimgui.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="glfw3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libSkiaSharp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="OpenAL32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App\imgs\Enemy\More zombies\" />
+  </ItemGroup>
+
+</Project>
