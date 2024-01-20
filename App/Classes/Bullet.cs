@@ -52,16 +52,18 @@ namespace GruppeC.App.Classes
                 {
                     //CurrentWorld.RemoveGameObject(i.Object);
                     //i.Object.SetTexture("./App/imgs/Enemy/death.png");
-                    CurrentWorld.RemoveGameObject(i.Object);
                     CurrentWorld.RemoveGameObject(this);
                     world.enemy_item_drop(i.Object.Position.X, i.Object.Position.Y, i.Object.Position.Z);
-                    if (CurrentWorld is GameWorld01)
+                    if(i.Object is Enemy enemy)
                     {
-                        GameWorld01 Player = CurrentWorld as GameWorld01;
-                        Player.set_amount_zombies_inside_the_world(-1);
-                        Player.add_kill();
-
+                        enemy.HP = enemy.HP - 10;
+                        if(enemy.HP <= 0)
+                        {
+                            world.RemoveGameObject(enemy);
+                        }
                     }
+                        
+
                 }
             }
         }

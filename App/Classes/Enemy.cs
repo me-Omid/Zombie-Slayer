@@ -11,6 +11,7 @@ namespace GruppeC.App.Classes
     internal class Enemy : GameObject
     {
         public float speed;
+        public int HP { get; set; }
         public Enemy()
         {
             IsCollisionObject = true;
@@ -19,6 +20,7 @@ namespace GruppeC.App.Classes
             IsCollisionObject = true;
             IsShadowCaster = true;
             AddRotationX(-90);
+            HP = 100;
         }
         public override void Act()
         {
